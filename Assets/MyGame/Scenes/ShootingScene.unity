@@ -733,10 +733,12 @@ MonoBehaviour:
   shoot: {fileID: 1676431984}
   countText: {fileID: 1901581587}
   counter: 0
+  newCount: 0
   target: {fileID: 2017182652048576689, guid: c806f6dbf6ec84baf888f0f0c1a20819, type: 3}
   xPosition: 0
   yPosition: 0
   targetCount: 0
+  won: {fileID: 735872}
 --- !u!4 &1852677689
 Transform:
   m_ObjectHideFlags: 0
