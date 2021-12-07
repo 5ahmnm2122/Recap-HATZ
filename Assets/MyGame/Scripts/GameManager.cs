@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
     public AudioSource shoot;
     public Text countText;
     public int counter = 0;
+    public int newCount;
     public GameObject target;
     public int xPosition;
     public int yPosition;
     public int targetCount;
+    public GameObject won;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,18 @@ public class GameManager : MonoBehaviour
     void OnMouseDown()
     {
         shoot.Play();
-        counter += 1;
+        newCount = counter + 1;
     }
     void SetCountText()
     {
-        countText.text = "Count: " + counter.ToString();
+        countText.text = "Count: " + newCount.ToString();
+    }
+
+    void Update()
+    {
+        if (newCount == 10)
+        {
+            won.SetActive(true);
+        }
     }
 }
